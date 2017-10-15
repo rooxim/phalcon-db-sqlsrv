@@ -1,0 +1,23 @@
+{
+    "name": "rooxim/phalcon-db-sqlsrv",
+    "description": "Phalcon\\DB\\Adapter\\Sqlsrv",
+    "type": "library",
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "Yuto Uehara",
+            "email": "yuto.uehara@mail.rooxim.com"
+        }
+    ],
+    "require": {
+        "ext-sqlsrv": "*"
+    },
+    "require-dev": {
+        "phalcon/ide-stubs": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phalcon": "src/Phalcon"
+        }
+    }
+}
