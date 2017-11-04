@@ -8,7 +8,7 @@ use Phalcon\Db\Result\PdoSqlsrv as ResultPdo;
  * <code>
  * $config = array(
  * "host" => "192.168.0.11",
- * "dbname" => "blog",
+ * "db_name" => "blog",
  * "port" => 3306,
  * "username" => "sigma",
  * "password" => "secret"
@@ -291,6 +291,9 @@ class Sqlsrv extends \Phalcon\Db\Adapter\Pdo implements \Phalcon\Db\AdapterInter
                 /*
                  * By default is string
                  */
+                case 'geography':
+                    $definition['type'] = Column::TYPE_BLOB;
+                    break;
                 default:
                     var_dump($columnType);
                     $definition['type'] = Column::TYPE_VARCHAR;
